@@ -1,0 +1,31 @@
+{
+"Movies":
+ [
+  {
+    "image": "\\MovieImages\\ShawshankRedemption.JPg",
+    "title": "The Shawshank Redemption",
+    "seasons": "6",
+    "views": "3008"
+  },
+  {
+    "image": "\\MovieImages\\TheGodfather.jpg",
+    "title": "The Godfather",
+    "seasons": "2",
+    "views": "33333"
+  },
+  {
+    "image": "\\MovieImages\\TheGodfather2.jpg",
+    "title": "The Godfather Part 2",
+    "seasons": "9",
+    "views": "87754"
+  },
+  {
+    "image": "\\MovieImages\\NicePrince.jpg",
+    "title": "The nice Prince",
+    "seasons": "1",
+    "views": "4566"
+  }    
+  ]
+}
+ 
+

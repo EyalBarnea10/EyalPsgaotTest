@@ -1,0 +1,59 @@
+﻿body {
+}
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 5px;
+    text-align: left;
+}
+ 
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table#t01 th {
+    background-color: black;
+    color: white;
+}
+
+.mainMoiviesList {
+    background-color: #eee;
+    border: 2px solid black;
+    width: 40%;
+    height: 60%;
+}
+.mainHead
+{
+    background-color:aqua;
+    border:2px solid black;
+    width:60%;
+    height:60%;
+     
+}
+
+.searchSelectOptionWidth{
+    width:30%;
+}
+
+.flex-container {
+    flex-wrap: wrap;
+}
+
+.Space10px {
+   margin-top:10px;
+   text-align:left;
+}
+.Space20px {
+    margin-top: 20px;
+    text-align: left;
+}

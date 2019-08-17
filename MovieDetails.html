@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+    <title>Movie Details</title>
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+    <script src="JavaScript/main.js"></script>
+
+</head>
+<body ng-app="movieDetailsApp" ng-controller="movieDetailsController" >   
+    <script>
+        var app = angular.module('movieDetailsApp', [])
+app.controller('movieDetailsController', function ($scope, $window) {
+    document.getElementById("viewSelectedMovie").innerHTML = localStorage.getItem("views");
+    document.getElementById("seasonsSelectedMovie").innerHTML = localStorage.getItem("seasons");
+    document.getElementById("detailsSelectedMovie").innerHTML = localStorage.getItem("details");
+     document.getElementById("titleSelectedMovie").innerHTML = localStorage.getItem("title");
+    document.getElementById("imgSelectedMovie").innerHTML = localStorage.getItem("image");
+});
+    </script>
+        <table>
+            <tr>
+                <td><label id="lablViewSelectdMovie">Views:</label></td> <td><p id="viewSelectedMovie"></p></td>
+            </tr>
+            <tr>
+                <td><label id="lablTitleSelectdMovie">Title:</label></td>
+                <td><p id="titleSelectedMovie"></p></td>
+            </tr>
+            <tr>
+                <td><label id="lablseasonsSelectdMovie">Seasons:</label></td>
+                <td><p id="seasonsSelectedMovie"></p></td>
+            </tr>
+            <tr>
+                <td><label id="labldetailsSelectdMovie">Details:</label></td>
+                <td><p id="detailsSelectedMovie"></p></td>
+            </tr>
+            <tr>             
+                <td><img id="imgSelectedMovie" /></td>
+            </tr>
+        </table>
+</body>
+</html>

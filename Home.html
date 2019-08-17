@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html ng-app="MoviesListSearchApp">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="JavaScript/main.js"></script>
+    <link href="Css/TestEyal.css" rel="stylesheet" />
+</head>
+<body ng-controller="mainMoviesListResultCtrl">
+    <div class="mainHead">
+        <div id="MainSearch" class="Space10px">
+            <label id="SearchNameLable">Search Series</label>
+            <input type="text" ng-model="searchNameInputFilter" id="SearchNameInput" />
+        </div>
+        <div class="searchSelectOptionWidth Space20px">
+            <div>
+                <label id="OrderByLable">OrderBy</label>
+                <select ng-model="selectedOrder" ng-options="searchOptions for searchOptions in searchOptions"></select>
+            </div>
+        </div>
+    </div>
+
+    <div class="Space20px mainMoiviesList">
+        
+            <div id="moviesListHeadline">
+                <label id="moviesList">Movies List</label>
+            </div>
+            <table border="1" class="Space10px">
+                <tr>
+                    <td> <lable>Title</lable> </td>
+                    <td> <lable>Views</lable> </td>
+                    <td> <lable>Seasons</lable></td>
+                    <td><lable>Image</lable></td>
+                </tr>
+
+                <tr ng-mouseover="" ng-click="setSelected(x)" ng-repeat="x in moviesListData | filter:searchNameInputFilter |orderBy:selectedOrder">
+                    <td>
+                        {{x.title }}
+                    </td>
+                    <td>
+                        {{x.views }}
+                    </td>
+                    <td>
+                        {{x.seasons }}
+                    </td>
+                    <td>
+                        <div id="imgDiv">
+                            <img ng-src="{{x.image }}" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        
+    </div>
+    
+</body>
+</html>
